@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --cl01:#003D73;
+    --cl02:#0878A4;
+    --cl03:#1ECFD6;
+}
+
+html, body{
+    background-image: radial-gradient(#04030c,#383140,#8A5D59);
+    width: 100%;
+   /*  overflow-x: hidden;   */
+}
+
+header{
+    width: 100%;
+    height: 500px;
+    background: var(--cl01);
+}
+
+
+
+.containerHeader{
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+nav{
+    width: 100%;
+    height: 125px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.p1Header{
+    font-size: 24px;
+    color: #8A5D59;
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    color: #fff;
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #1308e483;
+}
+
+nav ul button{
+    border: 1px solid var(--cl02);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: rgb(253, 9, 9);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover{
+    transition: background, color 0.6s;
+    background: var(--cl02);
+    color: white;
+}
+
+.containerHeader .header-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    background: var(--cl02);
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+    padding: 10px;
+}
+
+.header-block img{
+    width: 50%;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+
+.header-block .text{
+    position: absolute;
+    bottom: 30%;
+    left: 15%;
+}
+
+.header-block .text h2{
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.5s
+}
+
+.header-block .text p{
+    max-width: 280px;
+    color: white;
+    text-align: right;
+    transform: translateX(-20px);
+    transform: transform 0.4s;
+}
+
+/*Produto Catálogo*/ 
+
+section .catalogo{
+    width: 100vw;
+    padding: 100px;
+}
+
+section .tituloCatalogo{
+    color: #fff;
+}
+
+section .filter-card{
+    width: 980px;
+    height: 150px;
+    background: var(--cl03);
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input{
+    width: 700px;
+    height: 50px;
+    border: none;
+    border-radius: 4px 0px 0px 4px ;
+    text-indent: 10px;
+}
+
+.search-button{
+    width: 150px;
+    height: 50px;
+    border-radius: 0px 4px 4px 0px;
+    border: none;
+    background: var(--cl02);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: 0.2s ease;
+}
+
+.search-button:hover{
+    background: #ededed;
+    color: var(--cl02);
+}
+
+.tituloCatalogo{
+    font-style: oblique;
+    margin-top: 200px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+section .card-wrapper{
+    max-width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 30px;
+    padding-top: 50px;
+    justify-items: center;
+}
+
+section .card-item{
+    height: 400px;
+    background: var(--cl03);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content{
+    height: 40%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-item img{
+    width: 100%;
+}
+
+.card-item h4{
+    width: 90%;
+}
+
+.card-item p{
+    width: 90%;
+    font-style: italic;
+    color: #00000070;
+}
+
+.card-item button{
+    width: 90%;
+    padding: 15px 0px;
+    border: none;
+    background: var(--cl02);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.card-item button:hover{
+    background: #ededed;
+    color: var(--cl02);
+}
+
+/*Sobre*/
+
+.sobre{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
+.sobreConteudo{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: var(--cl02);
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.left{
+    width: 25%;
+    min-width: 300px;
+    height: 100%;
+    background: #000000a1;
+    border-radius: 8px;
+}
+
+.left img{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10%;
+}
+
+.right h3{
+    text-align: center;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.right p{
+    position: relative;
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 16px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+/*Footer*/
+
+footer{
+    width: 100%;
+    height: 250px;
+}
+
+footer .footerConteiner{
+    width: 100%;
+    height: 100%;
+    background: var(--cl01);
+    justify-content: space-evenly;
+    padding: 20px 10px;
+}
+
+.footer-links{
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.footer-rental, .footer-contact{
+    color: #fff;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4{
+    margin-bottom: 10px;
+}
+
+.footer-links h6{
+    margin-bottom: 8px;
+}
+
+.footer-social h4{
+    color: #fff;
+}
+
+ .footer-social a i {
+    color: rgb(2, 7, 68);
+    width: 32px;
+    height: 32px;
+}
+
+footer .last{
+    width: 100%;
+    height: 50px;
+    color: red;
+    display: flex;
+    padding-top: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.last h4{
+    margin: 0 0 0 0;
+    width: auto;
+    margin: 50px 0 0 0;
+    background: var(--cl01); 
+    
+}
+
+/*Media Queries*/
+
+@media (max-width:576px){
+    nav ul li{
+        display: block;
+    }
+    nav ul button {
+        margin: auto;
+    }
+    .p1Header{
+        text-align: center;
+        color: #fff;
+        padding-bottom: 10px;
+    }
+
+         .header-block {
+             display: flex;
+         }
+    
+         .header-block img {
+             width: 40%;
+             display: block;
+             top: 25%;
+    
+    
+         }
+    
+         .header-block .text h2 {
+             width: 50%;
+             display: block;
+             margin: 15px 30px 20px 10px;
+    
+    
+         }
+    
+         .header-block .text p {
+             width: 50%;
+             display: block;
+             margin: 15px 30px 20px 10px;
+    
+    
+         }
+
+    
+    section .filter-card{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 50vw;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+    .search-input{
+        max-width: 700px;
+        min-width: 240px;
+        
+    }
+    .search-button{
+        max-width: 150px;
+        min-width: 80px;
+   
+        
+    }
+    .sobre{
+        margin-top: 100px;
+    }
+    .title-wrapper-about{
+        margin-bottom: 20px;
+    }
+    .sobreConteudo{
+        flex-direction: column;
+        height: 80%;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        width: 90%;
+    }  
+    .right p{
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+        overflow: hidden;
+    }
+    .card-wrapper .card-item{
+        margin: 1.5em 0.5em;
+    }
+    footer{
+        height: 100%;
+        text-align: center;
+
+    }
+
+    footer .footerConteiner{
+        padding: 30px auto;
+    }
+    
+    footer .footer-contact{
+        padding-top: 15px;
+    }
+
+     
+    .footer-links{
+        flex-direction: column;
+        padding-left: 10;
+    }
+}
+
+/*Tablets*/
+
+@media (max-width:950px) {
+    nav ul li {
+        display: block;
+    }
+
+    nav ul button {
+        margin: auto;
+    }
+
+    .p1Header {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 10px;
+    }
+
+    .header-block{
+        display: flex;
+    }
+
+    .header-block img {
+        width: 40%;
+       display: block;
+       top: 25%;
+
+
+    }
+
+    .header-block .text h2 {
+       width: 50%;
+       display: block;
+       margin: 15px 30px 20px 10px;
+        
+        
+    }
+
+    .header-block .text p {
+        width: 50%;
+        display: block;
+        margin: 15px 30px 20px 10px;
+
+    
+    }
+
+
+    section .filter-card {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 50vw;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+          
+    }
+
+    .search-input {
+        max-width: 700px;
+        min-width: 240px;
+    }
+
+    .search-button {
+        max-width: 150px;
+        min-width: 80px;
+    }
+
+    .sobre {
+        margin-top: 100px;
+    }
+
+    .title-wrapper-about {
+        margin-bottom: 20px;
+    }
+
+    .sobreConteudo {
+        flex-direction: column;
+        height: 80%;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 90%;
+    }
+
+    .right p {
+        width: 100%;
+        margin: 0px;
+        text-align: left;
+        overflow: hidden;
+    }
+
+    footer {
+        height: 100%;
+        text-align: center;
+    }
+
+         footer .footerConteiner {
+        padding: 30px auto;
+    }
+    
+        footer .footer-contact {
+        padding-top: 15px;
+    }
+
+
+    .footer-links {
+        flex-direction: column;
+        padding-left: 10;
+    }
+}
